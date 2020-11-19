@@ -1,6 +1,6 @@
 {{- /* Template based on https://docs.gitlab.com/ee/user/application_security/container_scanning/#reports-json-format */ -}}
 {
-  "version": "2.3",
+  "version": "11.0.0",
   "vulnerabilities": [
   {{- $t_first := true }}
   {{- range . }}
@@ -59,7 +59,7 @@
           "type": "cve",
           "name": "{{ .VulnerabilityID }}",
           "value": "{{ .VulnerabilityID }}",
-          "url": ""
+          "url": "https://github.com/aquasecurity/trivy"
         }
       ],
       "links": [
